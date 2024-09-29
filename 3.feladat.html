@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="eredmeny"></p>
+    <script>
+        function szokoev(ev) {
+    if ((ev % 4 === 0 && ev % 100 !== 0) || (ev % 400 === 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+const evek = [2000, 2004, 1904, 2024, 1600, 1900, 1929, 1933, 2023, 1867];
+
+let eredmeny = "";
+
+        evek.forEach(ev => {
+            if (szokoev(ev)) {
+                eredmeny += "Szökőévek: " + ev + "<br>";
+            } else {
+                eredmeny += "Nem szökőévek: " + ev + "<br>";
+            }
+        });
+
+        document.getElementById("eredmeny").innerHTML = eredmeny;
+    </script>
+</body>
+</html>

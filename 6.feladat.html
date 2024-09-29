@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kimenet"></div>
+    <script>
+        function pelda(bemenet) {
+            const megoldas = document.getElementById('kimenet');
+            for (let betu of bemenet) {
+                if (!/[a-zA-Z]/.test(betu)) {
+                    break;
+                }
+                megoldas.innerHTML += betu;
+            }
+        }
+        pelda("ForzaLazio2024CoppaItalia");
+
+    </script>
+</body>
+</html>

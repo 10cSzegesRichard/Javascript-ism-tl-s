@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>0=kő, 1=papír, 2=olló</p>
+    <input type="number" id="jatekos1" min="0" max="2">
+        
+    <input type="number" id="jatekos2" min="0" max="2">
+
+    <button type="button" onclick="jatekeredmeny()">Eredmény</button>
+    
+    <p id="eredmeny"></p>
+
+    <script>
+        function jatekeredmeny() {
+            const jatekos1 = parseInt(document.getElementById('jatekos1').value);
+            const jatekos2 = parseInt(document.getElementById('jatekos2').value);
+            const eredmenyElem = document.getElementById('eredmeny');
+
+
+            if (jatekos1 === jatekos2) {
+                eredmenyElem.textContent = "A játék döntetlen.";
+            } else if ((jatekos1 === 0 && jatekos2 === 2) || 
+                       (jatekos1 === 1 && jatekos2 === 0) || 
+                       (jatekos1 === 2 && jatekos2 === 1)) {
+                        document.getElementById('eredmeny').textContent = "Az első játékos nyert!";
+            } else {
+                document.getElementById('eredmeny').textContent = "Az második játékos nyert!";
+            }
+        }
+    </script>
+</body>
+</html>

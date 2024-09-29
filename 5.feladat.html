@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="eredmeny"></p>
+    <script>
+        let szam = 268;
+        let szamjegy = szam.toString().split('');
+        let osszeg = 0;
+
+        for (let i = 0; i < szamjegy.length; i++) {
+            osszeg += parseInt(szamjegy[i]);
+        }
+
+        let atlag = osszeg / szamjegy.length;
+        let eredmeny1 = document.getElementById('eredmeny');
+        eredmeny1.textContent = 'A számjegyek átlaga ' + atlag;
+    </script>
+</body>
+</html>

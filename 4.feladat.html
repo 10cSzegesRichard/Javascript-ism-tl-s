@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="eredmeny"></div>
+    <script>
+        let my_string = 'Lazio';
+        let eredmenyek = document.getElementById('eredmeny');
+
+        for (let i = 0; i < my_string.length; i++) {
+            let betu = document.createElement('p');
+            betu.textContent = my_string[i];
+            eredmenyek.appendChild(betu);
+        }
+    </script>
+</body>
+</html>
