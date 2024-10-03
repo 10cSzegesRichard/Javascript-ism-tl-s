@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function feladat12(){
+    const negyzet = parseInt(prompt("Négyzet mérete: "));
+    for(let i = 1; i <= negyzet; i++){
+        let sor = "";
+        for(let j = 1; j <= negyzet; j++){
+            if(i == j){
+                sor += " %";
+            } else if(i == 1 || i == negyzet || j == 1 || j == negyzet){
+                sor += " %";
+
+            } else {
+                sor += "  ";
+            }     
+        
+        }
+        console.log(sor);
+    }
+       
+}
+feladat12();
+    </script>
+</body>
+</html>
